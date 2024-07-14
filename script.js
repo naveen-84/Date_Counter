@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const stopButton = document.getElementById("stop-button");
   const dateInput = document.getElementById("date-input");
   const timeInput = document.getElementById("time-input");
+  const messageInput = document.getElementById("message-input");
   const countdown = document.getElementById("countdown");
   const daysSpan = document.getElementById("days");
   const hoursSpan = document.getElementById("hours");
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function startCountdown() {
     const dateValue = dateInput.value.split("/");
     const timeValue = timeInput.value.split(":");
+    const customMessage = messageInput.value;
 
     if (dateValue.length !== 3 || timeValue.length !== 2) {
       alert(
@@ -52,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clearInterval(countdownInterval);
         alert("Game Over");
         messageDiv.classList.remove("hidden");
-        messageDiv.textContent = "The countdown has ended!";
+        messageDiv.textContent = customMessage || "The countdown has ended!";
         stopCountdown();
         stopButton.classList.add("hidden");
         startButton.classList.remove("hidden");

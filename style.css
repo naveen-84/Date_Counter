@@ -12,8 +12,8 @@ body {
 
 .main-box {
   text-align: center;
-  margin-left: -60rem;
-  margin-top: -25rem;
+  margin-left: -55rem;
+  margin-top: -20rem;
   background-color: transparent;
   padding: 20px;
   animation: glowing 1.5s infinite;
@@ -26,6 +26,7 @@ body {
   text-align: center;
   padding: 20px;
   border-radius: 10px;
+  width: 480px;
 }
 
 h1 {
@@ -34,7 +35,8 @@ h1 {
 }
 
 #date-input,
-#time-input {
+#time-input,
+#message-input {
   padding: 10px;
   width: 150px;
   margin-bottom: 20px;
@@ -57,6 +59,7 @@ button {
   cursor: pointer;
   margin: 5px;
   font-size: 1em;
+  width: 6rem;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -72,8 +75,8 @@ button:hover {
   border-radius: 50%;
   box-shadow: 2px 3px 8px 3px rgb(106, 102, 102);
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 70px;
+  top: 40px;
   width: 200px;
   height: 200px;
   display: flex;
